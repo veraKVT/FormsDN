@@ -14,7 +14,7 @@
     --color-line-lv: #6759FF;
     --color-line-dv: #EA51BC;
     --color-button-lv: #6759FF;
-    --color-button-dv: linear-gradient(to left top, #EA51BC,60%, #7B20B5);
+    --color-button-dv: linear-gradient(to left top, #EA51BC, 55%, #7B20B5);
     --color-box-shadow-dv: rgba(17, 18, 23, 0.9);
     --color-box-shadow-lv: rgba(220, 219, 235, 0.9);
     --color-frame-dv: #C3C7D9;
@@ -388,7 +388,7 @@ a:hover.yello{
     
     .blue{        
         background: var(--color-button-dv);        
-        color: var(--bg-color-main-dv);        
+        color: var(--color-h1-dv);        
         border: 1px solid var(--color-button-dv);        
     }
     
