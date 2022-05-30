@@ -55,6 +55,11 @@ main{
     gap: 132px;
 }
 
+.nav1{
+    background-image: url("Logo-l.png");
+    background-color: var(--bg-color-main-lv);
+}
+
 .nav2{
     display: flex;
     justify-content: space-between;
@@ -69,7 +74,17 @@ main{
    display: flex;
    justify-content: space-between;
    gap: 40px;
-   align-items: center;
+   align-items: center;   
+}
+
+.icon1{
+    background-image: url("Search icon-l.png");
+    background-color: var(--bg-color-main-lv);
+}
+
+.icon1{
+    background-image: url("Notification icon-l.png");
+    background-color: var(--bg-color-main-lv);
 }
 
 .ava{
@@ -77,6 +92,8 @@ main{
     width: 32px;
     height: 32px;
     border-radius: 31px;
+    background-image: url("Avatar-l.png");
+    background-color: var(--bg-color-main-lv);
 }
 h1{
     font-size: 48px;
@@ -337,6 +354,10 @@ a:hover.yello{
 
     body{
         background-color: var(--bg-color-main-dv);
+    }
+
+    header{
+        background-color: var(--bg-color-nav-dv);
     }
 
     .flex-block{        
