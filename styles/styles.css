@@ -45,7 +45,7 @@ main{
 }
 
 .nav-container{
-    display: flex;    
+    display: flex;   
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: var(--color-under-lv);
@@ -56,8 +56,10 @@ main{
 }
 
 .nav1{
-    background-image: url("Logo-l.png");
-    background-color: var(--bg-color-main-lv);
+    width: 186px;
+    height: 58px;
+    background-image: url("../images/Logo-l.png");    
+    flex-shrink: 0;
 }
 
 .nav2{
@@ -78,23 +80,24 @@ main{
 }
 
 .icon1{
-    background-image: url("Search icon-l.png");
-    background-color: var(--bg-color-main-lv);
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/Search-l.png");    
 }
 
-.icon1{
-    background-image: url("Notification icon-l.png");
-    background-color: var(--bg-color-main-lv);
+.icon2{
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/Not-l.png");   
 }
 
-.ava{
-    border: 1px;
+.ava{    
     width: 32px;
     height: 32px;
     border-radius: 31px;
-    background-image: url("Avatar-l.png");
-    background-color: var(--bg-color-main-lv);
+    background-image: url("../images/Avatar-l.png");    
 }
+
 h1{
     font-size: 48px;
     font-weight: 800;
@@ -367,7 +370,33 @@ a:hover.yello{
     .nav-container{        
         color: var(--color-under-dv);
         box-shadow: 1px 1px 6px var(--color-box-shadow-dv);        
+    }
+    
+    .nav1{
+        width: 186px;
+        height: 58px;
+        background-image: url("../images/Logo-d.png");         
     }    
+     
+    .icon1{
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/Search-d.png");    
+    }
+    
+    .icon2{
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/Not-d.png");   
+    }
+    
+    .ava{    
+        width: 32px;
+        height: 32px;
+        border-radius: 31px;
+        background-image: url("../images/Avatar-l.png");    
+    }
+    
     
     h1, form{
         color: var(--color-h1-dv);
