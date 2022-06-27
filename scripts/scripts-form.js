@@ -1,7 +1,8 @@
 function createSubMessage(){
     let companyName = document.getElementById('comp-name').value;
     let natureOfBusiness = document.getElementById('business').value;
-    let countryOfRegistration = document.getElementById('register').value;
+    let dateOfRegistration = document.getElementById('register').value;
+    let countryOfRegistration = document.getElementById('country').value;
     let addRess = document.getElementById('address').value;
     let postCode = document.getElementById('postcode').value;
     let userName = document.getElementById('name').value;
@@ -13,12 +14,13 @@ Please, check your contact information:
 
     1. Your company name: ${companyName}.
     2. Your nature of business: ${natureOfBusiness}.
-    3. Country of registration: ${countryOfRegistration}.
-    4. Address: ${addRess}.
-    5. Postcode: ${postCode}.
-    6. Contact name: ${userName}.
-    7. Contact phone: ${userPhone}.
-    8. Email: ${userMail}.`   
+    3. Date of registration : ${dateOfRegistration}.
+    4. Country of registration: ${countryOfRegistration}.
+    5. Address: ${addRess}.
+    6. Postcode: ${postCode}.
+    7. Contact name: ${userName}.
+    8. Contact phone: ${userPhone}.
+    9. Email: ${userMail}.`   
 
     const messageBox = document.createElement('p');
     const parent = document.getElementsByClassName('modal-content')[0];
