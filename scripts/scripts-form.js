@@ -1,17 +1,14 @@
-let companyName;
-let natureOfBusiness;
-let countryOfRegistration;
-let addRess;
-let postCode;
-let userName;
-let userPhone;
-let userMail;
+function createSubMessage(){
+    let companyName = document.getElementById('comp-name').value;
+    let natureOfBusiness = document.getElementById('business').value;
+    let countryOfRegistration = document.getElementById('register').value;
+    let addRess = document.getElementById('address').value;
+    let postCode = document.getElementById('postcode').value;
+    let userName = document.getElementById('name').value;
+    let userPhone = document.getElementById('phone').value;
+    let userMail = document.getElementById('email').value;
 
-
-const xBut = document.getElementById('xBut');
-const modBut = document.getElementById('modBut');
-
-let modalMessage = `We would soon inform you about you request!
+    let modalMessage = `We would soon inform you about you request!
 Please, check your contact information:
 
     1. Your company name: ${companyName}.
@@ -23,32 +20,25 @@ Please, check your contact information:
     7. Contact phone: ${userPhone}.
     8. Email: ${userMail}.`   
 
+    const messageBox = document.createElement('p');
+    const parent = document.getElementsByClassName('modal-content')[0];
+    const mesText = document.createTextNode(modalMessage);
+    messageBox.appendChild(mesText);
+    parent.appendChild(messageBox);
+};
+
 
 function showModal(){
-    let companyName = document.getElementById('comp-name').value;
-    let natureOfBusiness = document.getElementById('business').value;
-    let countryOfRegistration = document.getElementById('register').value;
-    let addRess = document.getElementById('address').value;
-    let postCode = document.getElementById('postcode').value;
-    let userName = document.getElementById('name').value;
-    let userPhone = document.getElementById('phone').value;
-    let userMail = document.getElementById('email').value;
-
-    let modalBox = document.getElementById('modal-box');
+    debugger;
+    let modalBox = document.getElementById('modal');
     let displayForModalBox = getComputedStyle(modalBox).getPropertyValue("display");
 
     if (displayForModalBox === 'none'){
-        displayForModalBox = 'block';
+        modalBox.style.display = 'block';
+        createSubMessage();
     } else {
-        displayForModalBox = 'none';
-        return modalMessage;
+        modalBox.style.display = 'none';        
     }
 }   
 
-    modBut.onclick = function showModal(){
-
-    };
-
-    xBut.onclick = function showModal(){
-        
-    };
+    
