@@ -10,25 +10,25 @@
   </head>
     <body>
         <header>
-            <nav>
-                <div class="nav-container">
-                    <div class="nav1"></div>
+            <nav class="nav-container">                
+                <div><img src="images/logo-light.png" alt="" id="logo"></div>
 
-                    <div class="nav2">
-                        <div><a href="adress/company.html">Company</a></div>
-                        <div><a href="adress/services.html">Services</a></div>
-                        <div><a href="adress/FinTech Solutions.html">FinTech Solutions</a></div>
-                        <div><a href="adress/Products.html">Products</a></div>
-                        <div><a href="adress/Portfolio.html">Portfolio</a></div>
-                        <div><a class="nav-us" href="adress/Contact us.html">Contact us</a></div>
-                    </div>
+                <ul class="nav-menu">
+                    <a href="adress/company.html"><li>Company</li></a>
+                    <a href="adress/services.html"><li>Services</li></a>
+                    <a href="adress/FinTech Solutions.html"><li>FinTech Solutions</li></a>
+                    <a href="adress/Products.html"><li>Products</li></a>
+                    <a href="adress/Portfolio.html"><li>Portfolio</li></a>
+                    <a class="nav-us" href="adress/Contact us.html"><li>Contact us</li></a>
+                </ul>
                                     
-                    <div class="nav3">
-                        <div class="icon1"></div>
-                        <div class="icon2"></div>
-                        <div class="ava"></div>
-                    </div>                   
-                </div>
+                <div class="nav-icons">
+                    <div><img src="images/search-light.png" alt="" id="search-icon"></div>
+                    <div><img src="images/note-light.png" alt="" id="note-icon"></div>
+                    <div><img class ="ava"src="images/ava.png" alt=""></div>
+                    <div ><img class="theme-button" src="images/brightness.png" alt=""></div>
+                </div>                   
+                
             </nav>
 
         </header>
@@ -37,33 +37,33 @@
                 <h1>Contact us</h1>
                 <span class="under">Need an experienced and skilled hand with custom IT projects? <br> Fill out the form to get a free consultation.</span>
             </div>
-            <form class="form1" action="javascript:showModal()" method="post">
-                <div class="flex-block">
+            <form action="adress/submit.html" method="post">
+                <section class="flex-block">
                     <div>                        
-                        <section>
+                        <div>
                             <label class="lab1" for="comp-name">Your company name*</label>
                             <br>
                             <input class="frame" id="comp-name" name="comp-name" type="text" required>
-                        </section>
+                        </div>
         
                         <br>
                         
-                        <section>
+                        <div>
                             <label class="lab1" for="business">Nature of Business*</label>
                             <br>
                             <input class="frame" id="business" name="business" type="text" required>
-                        </section>                            
+                        </div>                            
         
                             <br>
         
-                        <section>
+                        <div>
                             <label class="lab1" for="register">Date of registration</label>
                             <br>
                             <input class="frame" id="register" name="register" type="date">
-                        </section>
+                        </div>
                     </div>
                     <div>                            
-                        <section>
+                        <div>
                             <label class="lab1" for="country">Country of registration*</label>
                             <br>
                             <select class="frame-select" id="country" name="country" required>
@@ -74,61 +74,60 @@
                                 <option class="city" value="option 04">Option 04</option>
                                 <option class="city" value="option 05">Option 05</option>
                             </select>
-                        </section>
+                        </div>
         
                         <br>
         
-                        <section>
+                        <div>
                             <label class="lab1" for="address">Address*</label>
                             <br>
                             <input class="frame" id="address" name="address" type="text" required>
-                        </section>
+                        </div>
         
                         <br>
                         
-                        <section>
+                        <div>
                             <label class="lab1" for="postcode">Postcode*</label>
                             <br>
                             <input class="frame" id="postcode" name="postcode" type="text" required pattern="[a-zA-Z]{2}\s[0-9]{3}">
-                        </section> 
+                        </div> 
                     </div>
-                </div>
+                </section>
         
-                <div class="flex-block">
+                <section class="flex-block">
                     <div>
-                        <section>
+                        <div>
                             <label class="lab1" for="name">Contact name</label>
                             <br>
                             <input class="frame" id="name" name="name" type="text">
-                        </section>
+                        </div>
         
                         <br>
         
-                        <section>
+                        <div>
                             <label class="lab1" for="phone">Contact phone</label>
                             <br>
                             <input class="frame" id="phone" name="phone" type="text">
-                        </section>
+                        </div>
         
                         <br>
         
-                        <section>
+                        <div>
                             <label class="lab1" for="email">Email*</label>
                             <br>
                             <input class="frame" id="email" name="email" type="email" required>
-                        </section>
+                        </div>
                     </div>
                     <div>
-                        <section>
+                        <div>
                             <label class="lab1" for="ideas">Let’s talk about your idea</label>
                             <br>
                             <textarea class="area" id="ideas" name="ideas" rows="6" cols="30" maxlength="320" required></textarea>
-                        </section>
+                        </div>
         
                         <br>
         
-                        <section>
-                            <!-- <label class="lab1" for="budget">Select the maximum of your budget</label> -->
+                        <div>                           
                             <br>
                             <input class="tick" id="budget" name="budget" type="range" list="tickmarks" min="0" max="100" step="10">
                                 <datalist id="tickmarks">
@@ -145,54 +144,49 @@
                                     <option value="100" label="100"></option>
                                 </datalist>
                         
-                        </section>
+                        </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="flex-block-down">
+                <section class="flex-block-down">
                     <div>
-                        <section>
+                        <div>
                             <div class="drop">
                                 <img class="vector" src="images/Vector.svg"><span class="upload">Upload Additional file</span>
                             </div>
                             <p class="drop-text">File size of your documents should not exceed 10MB</p>
-                        </section>
+                        </div>
 
 
-                        <section>
+                        <div>
                             <input class="blue" id="modBut" type="submit" value="Submit">
-                        </section>
+                        </div>
         
                         <br>
         
-                        <section>                        
+                        <div>                        
                             <input class="circle" id="terms" name="terms" type="radio" value="I want to protect my data by signing an NDA">
                             <label class="check" for="terms">I want to protect my data by signing an NDA</label>
-                        </section>
+                        </div>
         
                     </div>
                     <div>
-                        <section>                        
+                        <div>                        
                             <input class="quadro" id="protect-check" name="protect-check" type="checkbox" value="I want to protect my data by signing an NDA">
                             <label class="check" for="protect-check">I want to protect my data by signing an NDA</label>
-                        </section>
+                        </div>
         
                         <br>
         
-                        <section>                        
+                        <div>                        
                             <input class="quadro" id="terms" name="terms" type="checkbox" value="I have read and accept the Terms and Conditions">
                             <label class="check" for="terms">I have read and accept the Terms and Conditions</label>
-                        </section>
+                        </div>
                         <br>                        
 
-                    </div>
+                    </section>
                 </div>
-            </form>
-            <div class="modal-box" id="modal">
-                <div class="modal-content">
-                    <p class="close" id="xBut" onclick="showModal()">&times;</p>                    
-                </div>
-            </div>
+            </form>            
         </main>
         <footer>
             <div class="foot-flex">
@@ -223,12 +217,12 @@
                     <br>
                     <aside><img src="images/US.png"></aside><p>+1-212-456-7890</p>
                     <br>
-                    <form class="foot-form">
-                        <label for="subscribe">Join our newsletter!</label>
-                        <br>
-                        <input class="bottom2" type="text" id="subscribe" name="subscribe" value="Email">
-                        <input class="check1" type="checkbox" id="subscribe" name="subscribe">
-                    </form>
+                    
+                    <label for="subscribe">Join our newsletter!</label>
+                    <br>                    
+                    <input class="bottom2" type="text" id="subscribe" name="subscribe" value="Email">
+                    <input class="check1" type="checkbox" id="subscribe" name="subscribe">
+                    
                 </div>
             </div>
         </footer>
