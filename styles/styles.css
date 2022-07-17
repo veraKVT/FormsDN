@@ -3,95 +3,58 @@
     padding: 0;
   }
 
-:root{
-    --bg-color-main-lv: #F9F9FC;
+:root {
+    --bg-color-main-lv: #F9F9FC;    
+    --bg-color-footer: #151A30;
+    --color-under-lv: #9BA2BC;    
+    --color-h1-lv: #535763;    
+    --color-line-lv: #6759FF;    
+    --color-button-lv: #6759FF;    
+    --color-box-shadow-lv: rgba(220, 219, 235, 0.9);
     --bg-color-main-dv: #111217;
-    --bg-color-nav-dv: #151A30;
-    --color-under-lv: #9BA2BC;
+    --bg-color-nav: #151A30;
     --color-under-dv: #949BB7;
-    --color-h1-lv: #535763;
     --color-h1-dv: #FDFDFD;
-    --color-line-lv: #6759FF;
     --color-line-dv: #EA51BC;
-    --color-button-lv: #6759FF;
     --color-button-dv: linear-gradient(to left top, #EA51BC, 55%, #7B20B5);
     --color-box-shadow-dv: rgba(17, 18, 23, 0.9);
-    --color-box-shadow-lv: rgba(220, 219, 235, 0.9);
     --color-frame-dv: #C3C7D9;
-}
+}    
+/* }
+.light-theme
 
+:root .dark-theme{
+    
+} */
 
-.modal-box{
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4); 
-}
-
-.modal-content{
-    background-color: var(--color-line-lv);
-    margin: auto;
-    padding: 20px;
-    border-radius: 15px;
-    width: 60%;
-    color: var(--color-h1-dv);
-
-}
-
-.close{
-    color: var(--color-line-lv);
-    text-align: right;
-}
-
-main{
+body{
     font-family: 'Montserrat', sans-serif;
-    margin-left: 112px;
-    margin-right: 318px;
 }
 
-.form1{
-    width: 1010px;
-}
-      
-.flex-block{
-    display: flex;    
-    margin: 60px 1px;
-    border-bottom: 1px solid var(--color-under-lv);
-    justify-content: space-between; 
-    padding-bottom: 60px; 
+main{    
+    padding-left: 120px;    
 }
 
-.flex-block-down{
-    display: flex;    
-    margin: 60px 1px;
-    justify-content: space-between; 
+form{
+    width: 75%;
 }
 
 .nav-container{
     display: flex;   
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: var(--color-under-lv);
-    padding: 20px 112px;
+    padding: 20px 120px;
     box-shadow: 1px 1px 6px var(--color-box-shadow-lv);
-    justify-content:left;
-    gap: 132px;
+    justify-content: space-between;    
 }
 
-.nav1{
-    width: 186px;
-    height: 58px;
-    background-image: url("../images/Logo-l.png");    
-    flex-shrink: 0;
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav2{
+.nav-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,39 +63,47 @@ main{
     font-weight: 600;
 }
 
-.nav3{
-   width: 300;
+.nav-icons{   
    display: flex;
    justify-content: space-between;
-   gap: 40px;
+   gap: 30px;
    align-items: center;   
 }
 
-.icon1{
-    width: 32px;
-    height: 32px;
-    background-image: url("../images/Search-l.png");    
-}
-
-.icon2{
-    width: 32px;
-    height: 32px;
-    background-image: url("../images/Not-l.png");   
-}
-
 .ava{    
-    width: 32px;
-    height: 32px;
-    border-radius: 31px;
-    background-image: url("../images/Avatar-l.png");    
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FDFDFD;
+    border-radius: 32px;       
+}
+
+.theme-button{
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+      
+.flex-block{
+    display: flex;    
+    margin: 60px 0px;
+    border-bottom: 1px solid var(--color-under-lv);
+    justify-content: space-between; 
+    padding-bottom: 60px; 
+}
+
+.flex-block-down{
+    display: flex;    
+    margin: 60px 0px;
+    justify-content: space-between; 
 }
 
 h1{
     font-size: 48px;
     font-weight: 800;
     margin-top: 60px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
+
 h1, form{
     color: var(--color-h1-lv);
 }
@@ -156,8 +127,7 @@ span{
     height: 49px;
     border-radius: 12px;
     border: 1px solid var(--color-under-lv);
-    margin-top: 12px;
-    font-family: 'Montserrat', sans-serif;
+    margin-top: 12px;    
     font-size: 16px;
     font-weight: 500;
     color: var(--color-under-lv);
@@ -196,8 +166,7 @@ span{
 }
 
 footer{
-    background-color: var(--bg-color-nav-dv);
-    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color-footer);    
     color: var(--bg-color-main-lv);
     padding: 40px 112px 60px;
 }
@@ -219,10 +188,7 @@ aside{
     border: 1px solid var(--color-button-lv);
     font-size: 24px;
     font-weight: 600;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    
-    
+    text-transform: uppercase;    
 }
 
 .lab1{
@@ -297,10 +263,8 @@ p{
     font-weight: 500;
     font-size: 14px;
     padding-left: 20px;
-    font-family: 'Montserrat', sans-serif;
-
-
 }
+
 label{
     font-weight: 600;
     font-size: 14px;
@@ -316,8 +280,8 @@ label{
     border-radius: 8px;
     vertical-align: middle;    
 }
-.foot-form{
-    margin-top: 20px;
+footer label{
+    margin: 20px 0px;
 }
 .yello{
     text-decoration: none;
@@ -350,7 +314,6 @@ datalist{
     color: var(--color-h1-lv);
     font-weight: 500;
     font-size: 16px;    
-    font-family: 'Montserrat', sans-serif;
     margin-left: 10px;
 }
 
@@ -389,7 +352,7 @@ a:hover.yello{
     }
 
     header{
-        background-color: var(--bg-color-nav-dv);
+        background-color: var(--bg-color-footer);
     }
 
     .flex-block{        
@@ -399,25 +362,8 @@ a:hover.yello{
     .nav-container{        
         color: var(--color-under-dv);
         box-shadow: 1px 1px 6px var(--color-box-shadow-dv);        
-    }
-    
-    .nav1{
-        width: 186px;
-        height: 58px;
-        background-image: url("../images/Logo-d.png");         
-    }    
-     
-    .icon1{
-        width: 32px;
-        height: 32px;
-        background-image: url("../images/Search-d.png");    
-    }
-    
-    .icon2{
-        width: 32px;
-        height: 32px;
-        background-image: url("../images/Not-d.png");   
-    }
+    }   
+   
     
     .ava{    
         width: 32px;
@@ -469,8 +415,8 @@ a:hover.yello{
     }
 
     .tick{        
-        background: #949BB7;
-        border: 1px solid #949BB7;        
+        background: var(--color-under-dv);
+        border: 1px solid var(--color-under-dv);        
     }    
     
     .check1{        
