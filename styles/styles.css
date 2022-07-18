@@ -3,7 +3,7 @@
     padding: 0;
   }
 
-:root .light-theme{
+:root{
     --bg-color-main-light: #F9F9FC;    
     --bg-color-footer-nav-dark: #151A30;
     --color-under-dark: #949BB7;
@@ -11,7 +11,7 @@
     --color-h1-light: #535763;    
     --color-line-light: #6759FF;    
     --color-button-light: #6759FF;    
-    --color-box-shadow-light: rgba(166, 165, 179, 0.9);    
+    --color-box-shadow-light: #949BB7;    
     --color-frame-light: #C3C7D9; 
     --bg-color-main-dark: #111217;    
     --color-under-dark: #949BB7;
@@ -28,7 +28,7 @@ body{
 
 main{    
     padding-left: 120px;
-    background-color: var(--bg-color-main-light);    
+    /* background-color: var(--bg-color-main-light);     */
 }
 
 .dark-theme main{
@@ -44,7 +44,7 @@ form{
     font-size: 16px;
     color: var(--color-under-light);
     padding: 20px 120px;
-    box-shadow: 2px 2px 6px var(--color-box-shadow-light);
+    box-shadow: 1px 1px 6px var(--color-box-shadow-light);
     justify-content: space-between;
     gap: 30px;  
     background-color: var(--bg-color-main-light); 
@@ -196,6 +196,8 @@ input{
 .dark-theme .flex-block input, .dark-theme .frame-select, .dark-theme .area{
     border: 1px solid var(--color-frame-dark);    
     color: var(--color-under-dark);
+    background-color: var(--bg-color-main-dark);
+
 }
 
 .frame-select{
@@ -262,7 +264,8 @@ aside{
 }
 
 .dark-theme .blue{
-    background-color: var(--color-button-dark);   
+    background: var(--color-button-dark);        
+    color: var(--color-h1-dark);        
     border: 1px solid var(--color-button-dark);
 }
 
@@ -454,11 +457,7 @@ a:hover.yello{
 
     body{
         background-color: var(--bg-color-main-dark);
-    }
-
-    header{
-        background-color: var(--bg-color-footer-nav-dark);
-    }
+    }    
 
     .flex-block{        
         border-bottom: 1px solid var(--color-under-dark);        
@@ -466,7 +465,8 @@ a:hover.yello{
     
     .nav-container{        
         color: var(--color-under-dark);
-        box-shadow: 1px 1px 6px var(--color-box-shadow-dark);        
+        box-shadow: 1px 1px 6px var(--color-box-shadow-dark);
+        background-color: var(--bg-color-footer-nav-dark);        
     }   
    
     
@@ -474,6 +474,7 @@ a:hover.yello{
         width: 32px;
         height: 32px;
         border-radius: 31px;
+        border: 1px solid var(--bg-color-footer-nav-dark);
         background-image: url("../images/Avatar-l.png");    
     }
     
@@ -522,21 +523,28 @@ a:hover.yello{
     .ticks{        
         background: var(--color-under-dark);
         border: 1px solid var(--color-under-dark);        
-    }    
+    }
+    
+    #tickmarks{
+        color: var(--color-frame-dark);
+    }
     
     .bottom-check{        
         background-color: var(--color-line-dark);        
     }
     
-    .drop{         
-        border: 2px dashed var(--color-frame-dark);        
+    .drop{
+        display: flex;        
+        border: 2px dashed var(--color-frame-dark);
+        justify-content: center;  
+        align-items: center;      
     }
     
     .drop-text{
         color: var(--color-frame-dark);          
     }
 
-    .upload{
+    .drop span{
         color: var(--color-h1-dark);        
     }   
     
@@ -544,7 +552,7 @@ a:hover.yello{
         color: var(--color-under-dark);    
     }
     
-    .nav-us{
+    #activ{
         color:  var(--color-h1-dark);
         text-decoration: underline var(--color-line-dark);        
     }
@@ -556,6 +564,46 @@ a:hover.yello{
     
     a:hover.yello{        
         color: var(--color-line-dark);    
+    }
+
+    .icon-bg1{
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/search-dark.png");
+    }
+
+    .icon-bg2{
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/note-dark.png");
+    }
+
+    .logo-bg{
+        width: 186px;
+        height: 58px;
+        background-image: url("../images/logo-dark.png");
+    }
+
+    .vector-bg{
+        width: 15px;
+        height: 18px;
+        background-image: url("../images/vector-dark.png");
+    }
+
+    #vector{
+        display: none;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #search-icon{
+        display: none;
+    }
+
+    #note-icon{
+        display: none;
     }
 }
 
