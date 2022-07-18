@@ -3,37 +3,37 @@
     padding: 0;
   }
 
-:root {
-    --bg-color-main-lv: #F9F9FC;    
-    --bg-color-footer: #151A30;
-    --color-under-lv: #9BA2BC;    
-    --color-h1-lv: #535763;    
-    --color-line-lv: #6759FF;    
-    --color-button-lv: #6759FF;    
-    --color-box-shadow-lv: rgba(220, 219, 235, 0.9);
-    --bg-color-main-dv: #111217;
-    --bg-color-nav: #151A30;
-    --color-under-dv: #949BB7;
-    --color-h1-dv: #FDFDFD;
-    --color-line-dv: #EA51BC;
-    --color-button-dv: linear-gradient(to left top, #EA51BC, 55%, #7B20B5);
-    --color-box-shadow-dv: rgba(17, 18, 23, 0.9);
-    --color-frame-dv: #C3C7D9;
-}    
-/* }
-.light-theme
-
-:root .dark-theme{
-    
-} */
+:root .light-theme{
+    --bg-color-main-light: #F9F9FC;    
+    --bg-color-footer-nav-dark: #151A30;
+    --color-under-dark: #949BB7;
+    --color-under-light: #9BA2BC;    
+    --color-h1-light: #535763;    
+    --color-line-light: #6759FF;    
+    --color-button-light: #6759FF;    
+    --color-box-shadow-light: rgba(166, 165, 179, 0.9);    
+    --color-frame-light: #C3C7D9; 
+    --bg-color-main-dark: #111217;    
+    --color-under-dark: #949BB7;
+    --color-h1-dark: #FDFDFD;
+    --color-line-dark: #EA51BC;
+    --color-button-dark: linear-gradient(to left top, #EA51BC, 55%, #7B20B5);
+    --color-box-shadow-dark: rgba(17, 18, 23, 0.9);
+    --color-frame-dark: #949BB7;    
+}
 
 body{
     font-family: 'Montserrat', sans-serif;
 }
 
 main{    
-    padding-left: 120px;    
+    padding-left: 120px;
+    background-color: var(--bg-color-main-light);    
 }
+
+.dark-theme main{
+    background-color: var(--bg-color-main-dark);
+} 
 
 form{
     width: 75%;
@@ -42,16 +42,28 @@ form{
 .nav-container{
     display: flex;   
     font-size: 16px;
-    color: var(--color-under-lv);
+    color: var(--color-under-light);
     padding: 20px 120px;
-    box-shadow: 1px 1px 6px var(--color-box-shadow-lv);
-    justify-content: space-between;    
+    box-shadow: 2px 2px 6px var(--color-box-shadow-light);
+    justify-content: space-between;
+    gap: 30px;  
+    background-color: var(--bg-color-main-light); 
+}
+
+.dark-theme .nav-container{
+    background-color: var(--bg-color-footer-nav-dark);
+    color: var(--color-under-dark);
+    box-shadow: 1px 1px 6px var(--color-box-shadow-dark)
 }
 
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+li{
+    line-height: 30px;
 }
 
 .nav-menu{
@@ -73,8 +85,12 @@ ul{
 .ava{    
     width: 40px;
     height: 40px;
-    border: 1px solid #FDFDFD;
+    border: 1px solid var(--bg-color-main-light);
     border-radius: 32px;       
+}
+
+.dark-theme .ava{
+    border: 1px solid var(--bg-color-footer-nav-dark);
 }
 
 .theme-button{
@@ -82,93 +98,147 @@ ul{
     height: 40px;
     opacity: 0.7;
 }
+
+.theme-button:hover{
+    opacity: 1;
+}
       
 .flex-block{
     display: flex;    
     margin: 60px 0px;
-    border-bottom: 1px solid var(--color-under-lv);
+    border-bottom: 1px solid var(--color-under-light);
     justify-content: space-between; 
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
+    gap: 30px;
+}
+
+.dark-theme .flex-block{
+    border-bottom: 1px solid var(--color-under-dark);
 }
 
 .flex-block-down{
     display: flex;    
-    margin: 60px 0px;
-    justify-content: space-between; 
+    padding: 60px 0px;
+    justify-content: space-between;
+    gap: 30px;
 }
 
 h1{
     font-size: 48px;
     font-weight: 800;
-    margin-top: 60px;
+    padding-top: 60px;
     margin-bottom: 15px;
 }
 
 h1, form{
-    color: var(--color-h1-lv);
+    color: var(--color-h1-light);
 }
+
+.dark-theme h1, .dark-theme form{
+    color: var(--color-h1-dark);
+}
+
 span{
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-under-lv);
+    color: var(--color-under-light);
     line-height: 20px;   
 }
 
-.under{
+.dark-theme span{
+    color: var(--color-under-dark);
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+.under-text{
     font-size: 16px;
     font-weight: 500;
-    color: var(--color-under-lv);
+    color: var(--color-under-light);
     line-height: 155%;
     margin-bottom: 60px;
 }
 
-.frame, .frame-select, .area{
+.dark-theme .under-text{
+    color: var(--color-under-dark);
+}
+
+.flex-block label{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color:  var(--color-h1-light);
+    margin: 0px 20px;
+    width: 392px;    
+}
+
+.dark-theme .flex-block label{
+    color:  var(--color-h1-dark);
+}
+
+.flex-block input, .frame-select, .area{
     width: 392px;
     height: 49px;
     border-radius: 12px;
-    border: 1px solid var(--color-under-lv);
+    border: 1px solid var(--color-frame-light);
     margin-top: 12px;    
     font-size: 16px;
     font-weight: 500;
-    color: var(--color-under-lv);
+    color: var(--color-under-light);
     padding-left: 20px;
     padding-right: 10px;
+    background-color: var(--bg-color-main-light);
+}
+
+.dark-theme .flex-block input, .dark-theme .frame-select, .dark-theme .area{
+    border: 1px solid var(--color-frame-dark);    
+    color: var(--color-under-dark);
 }
 
 .frame-select{
-    box-sizing: content-box;    
+    box-sizing: content-box;
+    margin-bottom: 20px;
 }
-
 
 .area{
     width: 392px;
     height: 158px;    
 }
 
-.city{
+.frame-select option{
     box-sizing: content-box;
     margin: 8px 1px;   
     line-height: 25px;
 }
 
 .foot-flex{
-    display: flex;
-    width: 100%;
-    justify-content: left;
-    gap: 123px;
+    display: flex;    
+    justify-content: space-between;
+    gap: 40px
+}
+
+.foot-flex > div{
+    flex-shrink: 0;
 }
 
 .icon-flex{
     display: flex;
     width: 40px;
-    margin-top: 20px;
+    margin-top: 60px;
     gap: 24px;      
 }
 
 footer{
-    background-color: var(--bg-color-footer);    
-    color: var(--bg-color-main-lv);
+    background-color: var(--bg-color-footer-nav-dark);    
+    color: var(--bg-color-main-light);
     padding: 40px 112px 60px;
+}
+
+footer label{
+    padding-left: 20px;
 }
 
 aside{
@@ -179,26 +249,21 @@ aside{
 .blue{
     width: 422px;
     height: 61px;
-    background-color: var(--color-button-lv);
+    background-color: var(--color-button-light);
     font-weight: 600; 
     font-size: 24px;
-    color: var(--bg-color-main-lv);
+    color: var(--bg-color-main-light);
     line-height: 29px;
     border-radius: 8px;
-    border: 1px solid var(--color-button-lv);
-    font-size: 24px;
-    font-weight: 600;
+    border: 1px solid var(--color-button-light);
     text-transform: uppercase;    
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif; 
 }
 
-.lab1{
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    color:  var(--color-h1-lv);
-    margin: 0px 20px;
-    width: 392px;    
+.dark-theme .blue{
+    background-color: var(--color-button-dark);   
+    border: 1px solid var(--color-button-dark);
 }
 
 h2{
@@ -206,43 +271,59 @@ h2{
     font-size: 18px;  
     line-height: 22px;
     letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 p{
     font-weight: 500;
     font-size: 14px;
     line-height: 155%;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-.check{
+
+.flex-block-down label{
     font-weight: 500;
-    font-size: 14px;
-    width: 20px;
-    height: 20px;
-    color:  var(--color-h1-lv);
-    margin: 5px;
-    
+    font-size: 14px;    
+    margin: 10px;    
+}
+
+.flex-block-down div:nth-child(2){
+    flex-shrink: 0;
 }
 
 .quadro{
     width: 20px;
     height: 20px;
-    background-color: var(--bg-color-main-lv);
-    border: 1px solid var(--color-frame-lv);
+    background-color: var(--bg-color-main-light);
+    border: 1px solid var(--color-frame-light);
     border-radius: 4px;
-    vertical-align: middle;
-    
+    vertical-align: sub;
+    margin-bottom: 25px;   
 }
+
+.dark-theme .quadro{
+    background-color: var(--bg-color-main-dark);
+    border: 1px solid var(--color-frame-dark);
+}
+
 .circle{
     width: 20px;
     height: 20px;
-    background: var(--bg-color-main-lv);
-    border: 1px solid var(--color-frame-lv);
+    background: var(--bg-color-main-light);
+    border: 1px solid var(--color-frame-light);
     border-radius: 10px;
-    vertical-align: middle;
-
+    vertical-align: sub;
+    margin-top: 10px;
 }
-.tick{
+
+.dark-theme .circle{
+    background: var(--bg-color-main-dark);
+    border: 1px solid var(--color-frame-dark);
+}
+
+.ticks{
     width: 392px;
     height: 4px;
     background: #E4E8F4;
@@ -250,35 +331,29 @@ p{
     border: 1px solid #E4E8F4;
     padding-left: 20px;
     padding-right: 10px;
+    margin-top: 40px;
 }
 
-.bottom2{
+.bottom-input{
     width: 330px;
     height: 38px;
-    background: var(--bg-color-nav-dv);
-    border: 1px solid var(--color-under-dv);
+    background: var(--bg-color-footer-nav-dark);
+    border: 1px solid var(--color-under-dark);
     border-radius: 8px;
     margin: 12px 5px;
-    color:var(--color-under-dv);
+    color: var(--color-under-dark);
     font-weight: 500;
     font-size: 14px;
     padding-left: 20px;
 }
 
-label{
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 1px;
-    color: var(--color-h1-dv);
-    margin: 0px 20px;
-}
-.check1{
+.bottom-check{
     width: 38px;
     height: 38px;
-    background-color: var(--color-line-lv);
+    background-color: var(--color-line-light);
     border-radius: 8px;
-    vertical-align: middle;    
+    vertical-align: -1em;
+    margin-left: 10px;    
 }
 footer label{
     margin: 20px 0px;
@@ -297,27 +372,40 @@ datalist{
 .drop{
     width: 422px;
     height: 120px;    
-    border: 2px dashed var(--color-frame-lv);
+    border: 2px dashed var(--color-frame-light);
     border-radius: 12px;
     text-align: center;
     line-height: 120px;
 }
 
+.dark-theme .drop{
+    border: 2px dashed var(--color-frame-dark);
+}
+
 .drop-text{
-    color: var(--color-frame-lv);
+    color: var(--color-frame-light);
     font-weight: 500;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 60px;    
 }
-.upload{
-    color: var(--color-h1-lv);
+
+.dark-theme .drop-text{
+    color: var(--color-frame-dark);
+}
+
+.drop span{
+    color: var(--color-h1-light);
     font-weight: 500;
     font-size: 16px;    
     margin-left: 10px;
 }
 
-.vector{
+.dark-theme .drop span{
+    color: var(--color-h1-dark);
+}
+
+.drop img{
     vertical-align: middle;
 }
 
@@ -325,43 +413,60 @@ a{
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-under-lv);    
+    color: var(--color-under-light);    
 }
 
-.nav-us{
-    color:  var(--color-h1-lv);
-    text-decoration: underline var(--color-line-lv);
-    text-underline-position: under;
+.dark-theme a{
+    color: var(--color-under-dark);
+}
+
+#activ{
+    color:  var(--color-h1-light);
+    text-decoration: underline 2px var(--color-line-light);   
+}
+
+.dark-theme #activ{
+    color:  var(--color-h1-dark);
+    text-decoration: underline 2px var(--color-line-dark);
 }
 
 a:hover{
-    color:  var(--color-h1-lv);
-    text-decoration: underline var(--color-line-lv);
+    color:  var(--color-h1-light);
+    text-decoration: underline 2px var(--color-line-light);
     text-underline-position: under;
+}
+
+.dark-theme a:hover{
+    color:  var(--color-h1-dark);
+    text-decoration: underline 2px var(--color-line-dark);
 }
 
 a:hover.yello{
     text-decoration: none;
-    color: var(--color-line-lv);    
+    color: var(--color-line-light);    
+}
+
+.dark-theme a:hover.yello{
+    color: var(--color-line-dark);
 }
 
 @media (prefers-color-scheme: dark){
 
     body{
-        background-color: var(--bg-color-main-dv);
+        background-color: var(--bg-color-main-dark);
     }
 
     header{
-        background-color: var(--bg-color-footer);
+        background-color: var(--bg-color-footer-nav-dark);
     }
 
     .flex-block{        
-        border-bottom: 1px solid var(--color-under-dv);        
+        border-bottom: 1px solid var(--color-under-dark);        
     }
     
     .nav-container{        
-        color: var(--color-under-dv);
-        box-shadow: 1px 1px 6px var(--color-box-shadow-dv);        
+        color: var(--color-under-dark);
+        box-shadow: 1px 1px 6px var(--color-box-shadow-dark);        
     }   
    
     
@@ -374,83 +479,83 @@ a:hover.yello{
     
     
     h1, form{
-        color: var(--color-h1-dv);
+        color: var(--color-h1-dark);
     }
     span{        
-        color: var(--color-under-dv);        
+        color: var(--color-under-dark);        
     }
     
     .under{
-        color: var(--color-under-dv);        
+        color: var(--color-under-dark);        
     }
     
-    .frame, .frame-select, .area{               
-        color: var(--color-under-dv);  
-        background-color: var(--bg-color-main-dv);   
-        border: 1px solid var(--color-frame-dv);    
+    .flex-block input, .frame-select, .area{               
+        color: var(--color-under-dark);  
+        background-color: var(--bg-color-main-dark);   
+        border: 1px solid var(--color-frame-dark);    
     }    
     
     .blue{        
-        background: var(--color-button-dv);        
-        color: var(--color-h1-dv);        
-        border: 1px solid var(--color-button-dv);        
+        background: var(--color-button-dark);        
+        color: var(--color-h1-dark);        
+        border: 1px solid var(--color-button-dark);        
     }
     
-    .lab1{        
-        color:  var(--color-h1-dv);          
+    .flex-block label{        
+        color:  var(--color-h1-dark);          
     }    
     
     .check{
-        color:  var(--color-h1-dv);       
+        color:  var(--color-h1-dark);       
     }
     
     .quadro{        
-        background-color: var(--bg-color-main-dv);
-        border: 1px solid var(--color-frame-dv);  
+        background-color: var(--bg-color-main-dark);
+        border: 1px solid var(--color-frame-dark);  
         
     }
     .circle{        
-        background: var(--bg-color-main-dv);
-        border: 1px solid var(--color-frame-dv);      
+        background: var(--bg-color-main-dark);
+        border: 1px solid var(--color-frame-dark);      
     }
 
-    .tick{        
-        background: var(--color-under-dv);
-        border: 1px solid var(--color-under-dv);        
+    .ticks{        
+        background: var(--color-under-dark);
+        border: 1px solid var(--color-under-dark);        
     }    
     
-    .check1{        
-        background-color: var(--color-line-dv);        
+    .bottom-check{        
+        background-color: var(--color-line-dark);        
     }
     
     .drop{         
-        border: 2px dashed var(--color-frame-dv);        
+        border: 2px dashed var(--color-frame-dark);        
     }
     
     .drop-text{
-        color: var(--color-frame-dv);          
+        color: var(--color-frame-dark);          
     }
 
     .upload{
-        color: var(--color-h1-dv);        
+        color: var(--color-h1-dark);        
     }   
     
     a{        
-        color: var(--color-under-dv);    
+        color: var(--color-under-dark);    
     }
     
     .nav-us{
-        color:  var(--color-h1-dv);
-        text-decoration: underline var(--color-line-dv);        
+        color:  var(--color-h1-dark);
+        text-decoration: underline var(--color-line-dark);        
     }
     
     a:hover{
-        color:  var(--color-h1-dv);
-        text-decoration: underline var(--color-line-dv);        
+        color:  var(--color-h1-dark);
+        text-decoration: underline var(--color-line-dark);        
     }
     
     a:hover.yello{        
-        color: var(--color-line-dv);    
+        color: var(--color-line-dark);    
     }
 }
 

@@ -8,88 +8,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@500;600;800&display=swap" rel="stylesheet">
   </head>
-    <body>
+    <body id="changer" class="light-theme">
         <header>
             <nav class="nav-container">                
                 <div><img src="images/logo-light.png" alt="" id="logo"></div>
-
                 <ul class="nav-menu">
                     <a href="adress/company.html"><li>Company</li></a>
                     <a href="adress/services.html"><li>Services</li></a>
                     <a href="adress/FinTech Solutions.html"><li>FinTech Solutions</li></a>
                     <a href="adress/Products.html"><li>Products</li></a>
                     <a href="adress/Portfolio.html"><li>Portfolio</li></a>
-                    <a class="nav-us" href="adress/Contact us.html"><li>Contact us</li></a>
-                </ul>
-                                    
+                    <a id="activ" href="adress/Contact us.html"><li>Contact us</li></a>
+                </ul>                                    
                 <div class="nav-icons">
                     <div><img src="images/search-light.png" alt="" id="search-icon"></div>
                     <div><img src="images/note-light.png" alt="" id="note-icon"></div>
                     <div><img class ="ava"src="images/ava.png" alt=""></div>
-                    <div ><img class="theme-button" src="images/brightness.png" alt=""></div>
-                </div>                   
-                
+                    <div ><img class="theme-button" src="images/brightness.png" alt="" onclick="changeTheme();"></div>
+                </div>                
             </nav>
-
         </header>
+
         <main> 
             <div class="head-text">
                 <h1>Contact us</h1>
-                <span class="under">Need an experienced and skilled hand with custom IT projects? <br> Fill out the form to get a free consultation.</span>
+                <span class="under-text">Need an experienced and skilled hand with custom IT projects? <br> Fill out the form to get a free consultation.</span>
             </div>
             <form action="adress/submit.html" method="post">
                 <section class="flex-block">
                     <div>                        
                         <div>
-                            <label class="lab1" for="comp-name">Your company name*</label>
+                            <label for="comp-name">Your company name*</label>
                             <br>
-                            <input class="frame" id="comp-name" name="comp-name" type="text" required>
+                            <input id="comp-name" name="comp-name" type="text" required>
+                        </div>        
+                        <div>
+                            <label for="business">Nature of Business*</label>
+                            <br>
+                            <input id="business" name="business" type="text" required>
                         </div>
-        
-                        <br>
-                        
                         <div>
-                            <label class="lab1" for="business">Nature of Business*</label>
+                            <label for="register">Date of registration</label>
                             <br>
-                            <input class="frame" id="business" name="business" type="text" required>
-                        </div>                            
-        
-                            <br>
-        
-                        <div>
-                            <label class="lab1" for="register">Date of registration</label>
-                            <br>
-                            <input class="frame" id="register" name="register" type="date">
+                            <input id="register" name="register" type="date">
                         </div>
                     </div>
                     <div>                            
                         <div>
-                            <label class="lab1" for="country">Country of registration*</label>
+                            <label for="country">Country of registration*</label>
                             <br>
                             <select class="frame-select" id="country" name="country" required>
-                                <option class="city" value="select">Select</option>
-                                <option class="city" value="option 01">Option 01</option>
-                                <option class="city" value="option 02">Option 02</option>
-                                <option class="city" value="option 03">Option 03</option>
-                                <option class="city" value="option 04">Option 04</option>
-                                <option class="city" value="option 05">Option 05</option>
+                                <option value="select">Select</option>
+                                <option value="option 01">Option 01</option>
+                                <option value="option 02">Option 02</option>
+                                <option value="option 03">Option 03</option>
+                                <option value="option 04">Option 04</option>
+                                <option value="option 05">Option 05</option>
                             </select>
-                        </div>
-        
-                        <br>
-        
+                        </div>        
                         <div>
-                            <label class="lab1" for="address">Address*</label>
+                            <label for="address">Address*</label>
                             <br>
-                            <input class="frame" id="address" name="address" type="text" required>
+                            <input id="address" name="address" type="text" required>
                         </div>
-        
-                        <br>
-                        
                         <div>
-                            <label class="lab1" for="postcode">Postcode*</label>
+                            <label for="postcode">Postcode*</label>
                             <br>
-                            <input class="frame" id="postcode" name="postcode" type="text" required pattern="[a-zA-Z]{2}\s[0-9]{3}">
+                            <input id="postcode" name="postcode" type="text" required pattern="[a-zA-Z]{2}\s[0-9]{3}">
                         </div> 
                     </div>
                 </section>
@@ -97,53 +82,42 @@
                 <section class="flex-block">
                     <div>
                         <div>
-                            <label class="lab1" for="name">Contact name</label>
+                            <label for="name">Contact name</label>
                             <br>
-                            <input class="frame" id="name" name="name" type="text">
+                            <input id="name" name="name" type="text">
                         </div>
-        
-                        <br>
-        
                         <div>
-                            <label class="lab1" for="phone">Contact phone</label>
+                            <label for="phone">Contact phone</label>
                             <br>
-                            <input class="frame" id="phone" name="phone" type="text">
+                            <input id="phone" name="phone" type="text">
                         </div>
-        
-                        <br>
-        
                         <div>
-                            <label class="lab1" for="email">Email*</label>
+                            <label for="email">Email*</label>
                             <br>
-                            <input class="frame" id="email" name="email" type="email" required>
+                            <input id="email" name="email" type="email" required>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <label class="lab1" for="ideas">Let’s talk about your idea</label>
+                            <label for="ideas">Let's talk about your idea</label>
                             <br>
                             <textarea class="area" id="ideas" name="ideas" rows="6" cols="30" maxlength="320" required></textarea>
                         </div>
-        
-                        <br>
-        
                         <div>                           
-                            <br>
-                            <input class="tick" id="budget" name="budget" type="range" list="tickmarks" min="0" max="100" step="10">
-                                <datalist id="tickmarks">
-                                    <option value="0" label="0"></option>
-                                    <option value="10"></option>
-                                    <option value="20"></option>
-                                    <option value="30"></option>
-                                    <option value="40"></option>
-                                    <option value="50"></option>
-                                    <option value="60"></option>
-                                    <option value="70"></option>
-                                    <option value="80"></option>
-                                    <option value="90"></option>
-                                    <option value="100" label="100"></option>
-                                </datalist>
-                        
+                            <input class="ticks" id="ticks" name="ticks" type="range" list="tickmarks" min="0" max="100" step="10">
+                            <datalist id="tickmarks">
+                                <option value="0" label="0"></option>
+                                <option value="10"></option>
+                                <option value="20"></option>
+                                <option value="30"></option>
+                                <option value="40"></option>
+                                <option value="50"></option>
+                                <option value="60"></option>
+                                <option value="70"></option>
+                                <option value="80"></option>
+                                <option value="90"></option>
+                                <option value="100" label="100"></option>
+                            </datalist>                        
                         </div>
                     </div>
                 </section>
@@ -152,77 +126,57 @@
                     <div>
                         <div>
                             <div class="drop">
-                                <img class="vector" src="images/Vector.svg"><span class="upload">Upload Additional file</span>
+                                <img src="images/Vector.svg"><span>Upload Additional file</span>
                             </div>
                             <p class="drop-text">File size of your documents should not exceed 10MB</p>
                         </div>
-
-
                         <div>
-                            <input class="blue" id="modBut" type="submit" value="Submit">
+                            <input class="blue" type="submit" value="Submit">
                         </div>
-        
-                        <br>
-        
                         <div>                        
                             <input class="circle" id="terms" name="terms" type="radio" value="I want to protect my data by signing an NDA">
-                            <label class="check" for="terms">I want to protect my data by signing an NDA</label>
-                        </div>
-        
+                            <label for="terms">I want to protect my data by signing an NDA</label>
+                        </div>        
                     </div>
                     <div>
                         <div>                        
-                            <input class="quadro" id="protect-check" name="protect-check" type="checkbox" value="I want to protect my data by signing an NDA">
-                            <label class="check" for="protect-check">I want to protect my data by signing an NDA</label>
-                        </div>
-        
-                        <br>
-        
+                            <input class="quadro" id="protect-check" name="protect-check" type="checkbox" value="I want to protect my data by signing an NDA" required>
+                            <label for="protect-check">I want to protect my data by signing an NDA</label>
+                        </div>        
                         <div>                        
-                            <input class="quadro" id="terms" name="terms" type="checkbox" value="I have read and accept the Terms and Conditions">
-                            <label class="check" for="terms">I have read and accept the Terms and Conditions</label>
+                            <input class="quadro" id="terms" name="terms" type="checkbox" value="I have read and accept the Terms and Conditions" required>
+                            <label for="terms">I have read and accept the Terms and Conditions</label>
                         </div>
-                        <br>                        
-
-                    </section>
-                </div>
+                    </div>
+                </section>                
             </form>            
         </main>
         <footer>
             <div class="foot-flex">
-                <div class="foot-child">
-                    <h2>Career</h2>
-                    <br>
-                    <p>If you are interested in working at Logo <br> send us your CV to <a class="yello" href = "mailto: careers@logo.com">careers@logo.com</a> <br> and we can talk</p>
-                    <br>
+                <div>
+                    <h2>Career</h2>                    
+                    <p>If you are interested in working at Logo <br> send us your CV to <a class="yello" href = "mailto: careers@logo.com">careers@logo.com</a> <br> and we can talk</p>                    
                     <div class="icon-flex">
-                        <div ><img src="images/inst.png" alt=""></div>
-                        <div ><img src="images/fb.png" alt=""></div>
-                        <div><img src="images/telegram.png" alt=""></div>
+                        <a href = ""><div ><img src="images/inst.png" alt=""></div></a>
+                        <a href = ""><div ><img src="images/fb.png" alt=""></div></a>
+                        <a href = ""><div><img src="images/telegram.png" alt=""></div></a>
                     </div>
                 </div>
-                <div class="foot-child">
-                    <h2>Offices</h2>
-                    <br>
-                    <p>United States of America <br> 500 5th Avenue Suite 400, NY 10110</p>
-                    <br>
-                    <p>United Kingdom <br> High St, Bromley BR1 1DN</p>
-                    <br>
+                <div>
+                    <h2>Offices</h2>                    
+                    <p>United States of America <br> 500 5th Avenue Suite 400, NY 10110</p>                    
+                    <p>United Kingdom <br> High St, Bromley BR1 1DN</p>                    
                     <p>France <br> 80 avenue des Terroirs de France, Paris</p>
                 </div>
-                <div class="foot-child">
-                    <h2>For Quick Inquiries</h2>
-                    <br>
-                    <aside><img src="images/gb.png"></aside><p>+44 7911 123456</p>
-                    <br>
-                    <aside><img src="images/US.png"></aside><p>+1-212-456-7890</p>
-                    <br>
+                <div>
+                    <h2>For Quick Inquiries</h2>                    
+                    <aside><img src="images/gb.png"></aside><p>+44 7911 123456</p>                    
+                    <aside><img src="images/US.png"></aside><p>+1-212-456-7890</p>                    
                     
                     <label for="subscribe">Join our newsletter!</label>
-                    <br>                    
-                    <input class="bottom2" type="text" id="subscribe" name="subscribe" value="Email">
-                    <input class="check1" type="checkbox" id="subscribe" name="subscribe">
-                    
+                    <br>                
+                    <input class="bottom-input" type="text" id="subscribe" name="subscribe" value="Email">
+                    <input class="bottom-check" type="checkbox" id="subscribe" name="subscribe">                    
                 </div>
             </div>
         </footer>
