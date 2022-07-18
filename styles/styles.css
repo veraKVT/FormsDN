@@ -105,7 +105,7 @@ li{
       
 .flex-block{
     display: flex;    
-    margin: 60px 0px;
+    margin-top: 60px;
     border-bottom: 1px solid var(--color-under-light);
     justify-content: space-between; 
     padding-bottom: 60px;
