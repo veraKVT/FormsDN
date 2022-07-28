@@ -1,0 +1,84 @@
+.foot-flex{
+    display: flex;    
+    justify-content: space-between;
+    gap: 40px
+}
+
+.foot-flex > div{
+    flex-shrink: 0;
+}
+
+.icon-flex{
+    display: flex;
+    width: 40px;
+    margin-top: 60px;
+    gap: 24px;      
+}
+
+footer{
+    background-color: var(--bg-color-footer-nav-dark);    
+    color: var(--bg-color-main-light);
+    padding: 40px 112px 60px;
+}
+
+footer label{
+    padding-left: 20px;
+    margin: 20px 0px;    
+}
+
+aside{
+    float: left;
+    margin-right: 12px;
+}
+
+h2{
+    font-weight: 800;
+    font-size: 18px;  
+    line-height: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 155%;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.bottom-input{
+    width: 330px;
+    height: 38px;
+    background: var(--bg-color-footer-nav-dark);
+    border: 1px solid var(--color-under-dark);
+    border-radius: 8px;
+    margin: 12px 5px;
+    color: var(--color-under-dark);
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.bottom-check{
+    width: 38px;
+    height: 38px;
+    background-color: var(--color-line-light);
+    border-radius: 8px;
+    vertical-align: -1em;
+    margin-left: 10px;    
+}
+
+.yello{
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover.yello{
+    text-decoration: none;
+    color: var(--color-line-light);    
+}
+
+.dark-theme a:hover.yello{
+    color: var(--color-line-dark);
+}

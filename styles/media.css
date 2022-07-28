@@ -1,0 +1,161 @@
+@media (prefers-color-scheme: dark){
+
+    body{
+        background-color: var(--bg-color-main-dark);
+    }    
+
+    .flex-block{        
+        border-bottom: 1px solid var(--color-under-dark);        
+    }
+
+    main{
+        background-color: var(--bg-color-main-dark);
+    }
+    
+    .nav-container{        
+        color: var(--color-under-dark);
+        box-shadow: 1px 1px 6px var(--color-box-shadow-dark);
+        background-color: var(--bg-color-footer-nav-dark);        
+    }   
+   
+    
+    .ava{    
+        width: 32px;
+        height: 32px;
+        border-radius: 31px;
+        border: 1px solid var(--bg-color-footer-nav-dark);            
+    }
+    
+    
+    h1, form{
+        color: var(--color-h1-dark);
+    }
+    span{        
+        color: var(--color-under-dark);        
+    }
+    
+    .under{
+        color: var(--color-under-dark);        
+    }
+    
+    .flex-block input, .frame-select, .area{               
+        color: var(--color-under-dark);  
+        background-color: var(--bg-color-main-dark);   
+        border: 1px solid var(--color-frame-dark);    
+    }    
+    
+    .blue{        
+        background: var(--color-button-dark);        
+        color: var(--color-h1-dark);        
+        border: 1px solid var(--color-button-dark);        
+    }
+
+    .blue:hover{
+        background: var(--color-line-dark);
+    }
+    
+    .flex-block label{        
+        color:  var(--color-h1-dark);          
+    }    
+    
+    .check{
+        color:  var(--color-h1-dark);       
+    }
+    
+    .quadro{        
+        background-color: var(--bg-color-main-dark);
+        border: 1px solid var(--color-frame-dark);  
+        
+    }
+    .circle{        
+        background: var(--bg-color-main-dark);
+        border: 1px solid var(--color-frame-dark);      
+    }
+
+    .ticks{        
+        background: var(--color-under-dark);
+        border: 1px solid var(--color-under-dark);        
+    }
+    
+    #tickmarks{
+        color: var(--color-frame-dark);
+    }
+    
+    .bottom-check{        
+        background-color: var(--color-line-dark);        
+    }
+    
+    .drop{
+        display: flex;        
+        border: 2px dashed var(--color-frame-dark);
+        justify-content: center;  
+        align-items: center;      
+    }
+    
+    .drop-text{
+        color: var(--color-frame-dark);          
+    }
+
+    .drop span{
+        color: var(--color-h1-dark);        
+    }   
+    
+    a{        
+        color: var(--color-under-dark);    
+    }
+    
+    #activ{
+        color:  var(--color-h1-dark);
+        text-decoration: underline var(--color-line-dark);        
+    }
+    
+    a:hover{
+        color:  var(--color-h1-dark);
+        text-decoration: underline var(--color-line-dark);        
+    }
+    
+    a:hover.yello{        
+        color: var(--color-line-dark);    
+    }
+
+    .icon-bg1{
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/search-dark.png");
+    }
+
+    .icon-bg2{
+        width: 32px;
+        height: 32px;
+        background-image: url("../images/note-dark.png");
+    }
+
+    .logo-bg{
+        width: 186px;
+        height: 58px;
+        background-image: url("../images/logo-dark.png");
+        flex-shrink: 0;
+    }
+
+    .vector-bg{
+        width: 15px;
+        height: 18px;
+        background-image: url("../images/vector-dark.png");
+    }
+
+    #vector{
+        display: none;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #search-icon{
+        display: none;
+    }
+
+    #note-icon{
+        display: none;
+    }
+}

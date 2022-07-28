@@ -19,7 +19,8 @@
     --color-line-dark: #EA51BC;
     --color-button-dark: linear-gradient(to left top, #EA51BC, 55%, #7B20B5);
     --color-box-shadow-dark: rgba(17, 18, 23, 0.9);
-    --color-frame-dark: #949BB7;    
+    --color-frame-dark: #949BB7;
+    --color-button-hover-light: #5528D6;    
 }
 
 body{
@@ -30,14 +31,3 @@ body{
 .dark-theme{
     background-color: var(--bg-color-main-dark);
 }
-
-
-
-
-
-
-
-
-
-
-

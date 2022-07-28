@@ -1,0 +1,95 @@
+.nav-container{
+    display: flex;   
+    font-size: 16px;
+    color: var(--color-under-light);
+    padding: 20px 120px;
+    box-shadow: 1px 1px 6px var(--color-box-shadow-light);
+    justify-content: space-between;
+    gap: 30px;  
+    background-color: var(--bg-color-main-light); 
+}
+
+.dark-theme .nav-container{
+    background-color: var(--bg-color-footer-nav-dark);
+    color: var(--color-under-dark);
+    box-shadow: 1px 1px 6px var(--color-box-shadow-dark)
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    line-height: 30px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-icons{   
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;
+   align-items: center;   
+}
+
+.ava{    
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--bg-color-main-light);
+    border-radius: 32px;       
+}
+
+.dark-theme .ava{
+    border: 1px solid var(--bg-color-footer-nav-dark);
+}
+
+.theme-button{
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+.theme-button:hover{
+    opacity: 1;
+}
+
+#activ{
+    color:  var(--color-h1-light);
+    text-decoration: underline 2px var(--color-line-light);   
+}
+
+.dark-theme #activ{
+    color:  var(--color-h1-dark);
+    text-decoration: underline 2px var(--color-line-dark);
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-under-light);    
+}
+
+.dark-theme a{
+    color: var(--color-under-dark);
+}
+
+a:hover{
+    color:  var(--color-h1-light);
+    text-decoration: underline 2px var(--color-line-light);
+    text-underline-position: under;
+}
+
+.dark-theme a:hover{
+    color:  var(--color-h1-dark);
+    text-decoration: underline 2px var(--color-line-dark);
+}
